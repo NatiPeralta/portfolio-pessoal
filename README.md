@@ -22,15 +22,6 @@ O objetivo é praticar conceitos de HTML5 semântico, CSS3 (incluindo Flexbox, G
 
 ---
 
-## 📂 Estrutura de Arquivos
-
-/ (raiz)
-├── perfil.html
-├── styles.css
-└── README.md
-
----
-
 ## 🚀 Como visualizar
 1. Faça o clone deste repositório:
    ```bash
