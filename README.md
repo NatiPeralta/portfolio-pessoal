@@ -26,3 +26,25 @@ O objetivo é praticar conceitos de HTML5 semântico, CSS3 (incluindo Flexbox, G
 1. Faça o clone deste repositório:
    ```bash
    git clone https://github.com/seu-usuario/nome-do-repositorio.git
+
+2. Abra o arquivo perfil.html diretamente no navegador.
+
+---
+
+## ✨ Melhorias Futuras
+- Adicionar um favicon.
+- Criar animações sutis com @keyframes.
+- Inserir novos projetos e conteúdos dinâmicos.
+
+---
+
+📧 Contato
+Caso queira entrar em contato, me encontre em:
+
+🔗 [LinkedIn](linkedin.com/in/natália-peralta-7534ba198).<br>
+📫 [nati.g.peralta@hotmail.com](mailto:nati.g.peralta@hotmail.com)
+
+Natália Guedes Peralta
+Estudante de Desenvolvimento Full-Stack
+
+
