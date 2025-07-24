@@ -38,7 +38,7 @@ O objetivo é praticar conceitos de HTML5 semântico, CSS3 (incluindo Flexbox, G
 
 ---
 
-📧 Contato
+## 📧 Contato
 Caso queira entrar em contato, me encontre em:
 
 🔗 [LinkedIn](linkedin.com/in/natália-peralta-7534ba198).<br>
