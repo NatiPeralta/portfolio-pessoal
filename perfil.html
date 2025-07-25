@@ -3,28 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
     <title>Portfólio - Natália Peralta</title>
 </head>
 <body>
 
     <header>
-        <h1>Natália Peralta - Desenvolvedora Full Stack Jr</h1>
-        <p class="slogan">Apaixonada por tecnologia, design e experiências digitais.</p>
-
+        <div class="menu">
         <figure>
-            <img src="./images/Natália-Peralta.JPEG" alt="Imagem de perfil da formanda Natália Peralta - Desenvolvedora Full Stack Jr em formação!">
-            <figcaption>Natália Peralta - Desenvolvedora Full Stack Jr</figcaption>
+            <img src="images/icon.png" alt="Foto de Natália Peralta">
+            <figcaption>NP</figcaption>
         </figure>
              
-        <nav class="nav-bar" aria-label="Menu de navegação principal">
+        <nav  aria-label="Menu de navegação principal">
             <ul class="nav-menu">
                 <li class="nav-item"><a href="#sobre-mim">Sobre mim</a></li>
                 <li class="nav-item"><a href="#habilidades">Habilidades</a></li>
                 <li class="nav-item"><a href="#projetos">Projetos</a></li>
                 <li class="nav-item"><a href="#contato">Contato</a></li>
             </ul>
+            <div class="hamburguer">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
+        </div>
+
+        <div class="title-page">
+            <h1>Natália Peralta - Desenvolvedora Full Stack Jr</h1>
+            <p class="slogan">Apaixonada por tecnologia, design e experiências digitais.</p>
+            <img src="images/Natália-Peralta.JPEG" alt="Foto de Natália Peralta">
+        </div>
     </header>
 
     <main>
@@ -32,7 +43,10 @@
             <h2>Sobre mim</h2>
             <article>
                 <h3>Quem eu sou?</h3>
-                <p>Breve descrição sobre a minha pessoa</p>
+                <p>Sou Natália Peralta, estudante de Desenvolvimento Full Stack Jr com foco em Front-end. 
+                   Tenho paixão por criar interfaces funcionais, intuitivas e responsivas, utilizando 
+                   tecnologias como HTML, CSS, JavaScript e React. Além da programação, gosto de design 
+                   e busco sempre unir estética e experiência do usuário.</p>
             </article>
         </section>
 
@@ -61,15 +75,17 @@
             <h2>Projetos</h2>
             <article>
                 <h3>Meu Projeto X</h3>
-                <p>Breve descrição sobre o projeto</p>
+                <p>Este é um projeto desenvolvido durante o curso Dev Full Stack Jr, 
+                   com foco em HTML5 semântico e CSS3. Inclui elementos de responsividade 
+                   e boas práticas de código.</p>
             </article>
         </section>
 
         <section id="contato" class="contato">
             <h2>Contato</h2>
             <article>
-                <h3>Algo em meu perfil chamou a sua atenção? Entre em contato!</h3>
-                <p>Breve descrição de meios de contato</p>
+                <h3>Quer conversar comigo? Vamos nos conectar!</h3>
+                <p>Você pode me enviar uma mensagem pelo LinkedIn ou visualizar meus repositórios no GitHub.</p>
             </article>
         </section>
     </main>
@@ -77,14 +93,31 @@
     <aside>
         <h2>Minhas Redes</h2>
         <ul>
-            <li><a href="https://github.com/NatiPeralta" target="_blank">GitHub</a>/li>
-            <li><a href="https://www.linkedin.com/in/natália-peralta" target="_blank">LinkedIn</a></li>
+            <li><a href="https://github.com/NatiPeralta" target="_blank">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/nat%C3%A1lia-peralta" target="_blank">LinkedIn</a></li>
         </ul>
     </aside>
 
     <footer>
         <p>&copy; 2025 Natália Peralta — Todos os direitos reservados.</p>
     </footer>
-    
+
+    <script>  
+    const hamburguer = document.querySelector('.hamburguer');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hamburguer.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        hamburguer.classList.toggle('active');
+    });
+
+    // Fecha o menu quando um link for clicado
+    document.querySelectorAll('.nav-link').forEach(link =>
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            hamburguer.classList.remove('active');
+        })
+    );
+</script>
 </body>
 </html>
