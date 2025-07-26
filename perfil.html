@@ -39,7 +39,7 @@
     </header>
 
     <main>
-        <section id="sobre-mim" class="sobre-mim">
+        <section id="sobre-mim" class="sobre-mim reveal">
             <div class="icon-decor">
                 <img class="icon" src="./images/programming.png"> 
                 <img class="icon-2" src="./images/programming.png"> 
@@ -60,7 +60,7 @@
         </div>
         </section>
 
-        <section id="habilidades" class="habilidades">
+        <section id="habilidades" class="habilidades reveal">
             <div class="icon-decor">
                 <img class="icon" src="./images/programming.png"> 
                 <img class="icon-2" src="./images/programming.png"> 
@@ -93,7 +93,7 @@
         </div>
         </section>
 
-        <section id="projetos" class="projetos">
+        <section id="projetos" class="projetos reveal">
             <div class="icon-decor">
                 <img class="icon" src="./images/programming.png"> 
                 <img class="icon-2" src="./images/programming.png"> 
@@ -117,7 +117,7 @@
                 <div class="card">
                     <img src="./images/projeto-casa-nova.png" alt="Projeto casa nova">
                     <h2>Chá de Casa Nova Garol</h2>
-                    <p>Projeto desenvolvido especialmente para o chá de casa nova de amigos queridos.</p>
+                    <p>Desenvolvido para o chá de casa nova de amigos.</p>
                 <div class="buttons">
                     <a href="https://natiperalta.github.io/casa-nova/" target="_blank" class="btn">Ver Projeto</a>
                     <a href="https://github.com/NatiPeralta/casa-nova" target="_blank" class="btn secondary">Código</a>
@@ -136,7 +136,7 @@
             </div>
         </section>
 
-        <section id="contato" class="contato">
+        <section id="contato" class="contato reveal">
             <div class="icon-decor">
                 <img class="icon" src="./images/programming.png"> 
                 <img class="icon-2" src="./images/programming.png"> 
@@ -161,22 +161,6 @@
         <p>&copy; 2025 Natália Peralta — Todos os direitos reservados</p>
     </footer>
 
-    <script>  
-    const hamburguer = document.querySelector('.hamburguer');
-    const navMenu = document.querySelector('.nav-menu');
-
-    hamburguer.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        hamburguer.classList.toggle('active');
-    });
-
-    // Fecha o menu quando um link for clicado
-    document.querySelectorAll('.nav-link').forEach(link =>
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-            hamburguer.classList.remove('active');
-        })
-    );
-</script>
+<script src="./app.js"></script>
 </body>
 </html>
