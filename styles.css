@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    box-sizing: border-box;
 }
 
 body {
@@ -10,19 +11,25 @@ body {
     color: #c9d1d9;
 }
 
-header {
-    height: 100vh; /* Ocupa 100% da altura da tela */
-}
-
 .menu {
+    position: fixed;
+    width: 100%;
+    z-index: 9999;  /* Garante que fique acima de todos os elementos */
+    left: 0;
+    top: 0;
     display: flex;
     align-items: center;
     justify-content: space-between; /* Mantém cada lado separado */
     background-color: #181a33;
     color: #c9d1d9;
-    padding: 20px 80px 20px 80px;
+    padding: 20px 80px;
     border-bottom: 1px solid #75baff;
     box-shadow: 0 2px 5px 0 #1b4269;
+}
+
+header {
+    height: 100vh;
+    padding-top: 80px; /* mesma altura da barra de menu */
 }
 
 main {
@@ -34,6 +41,14 @@ main {
     margin-bottom: 100px;
     flex-wrap: wrap;
     gap: 20px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
 }
 
 footer {
@@ -57,6 +72,16 @@ img {
     height: 30px;
 }
 
+.icon {
+    width: 30px;
+    height: 30px;
+}
+
+.icon-2 {
+    width: 40px;
+    height: 40px;
+}
+
 figure {
     display: flex;
 }
@@ -76,7 +101,6 @@ a{
 .nav-menu {
     display: flex;
     gap: 30px;
-    justify-content: end;
 }
 
 .nav-item a{
@@ -118,6 +142,7 @@ a{
 }
 
 .title-page {
+    padding-top: 100px;
     text-align: center;
     opacity: 0;
     animation: fadeIn 1.5s ease-in forwards;
@@ -130,7 +155,8 @@ a{
 }
 
 .title-page p{
-    padding-bottom: 30px;
+    padding-bottom: 50px;
+    font-size: 20px;
 }
 
 .title-page img{
@@ -139,16 +165,55 @@ a{
     border-radius: 100px;
 }
 
+.icon-decor{
+    padding-top: 130px;
+}
+
+.align-sobre {
+    display: flex;
+    padding-left: 40px;
+}
+
+.texto-sobre h2 {
+    padding-bottom: 50px;
+    font-size: 30px;
+}
+
+.texto-sobre article, h3{
+    padding-top: 20px;
+    text-align: start;
+    width: 50%;
+    font-size: 20px;
+}
+
+.texto-sobre h3{
+    font-size: 23px;
+    padding-bottom: 20px;
+}
+
+.texto-sobre p {
+    font-size: 18px;
+}
+
+.img-sobre {
+    width: 50%;
+}
+
+.img-sobre img{
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+}
+
 h1 {
     color: #c9d1d9;
     margin-bottom: 20px;
     margin-top: 100px;
+    font-size: 40px;
 }
 
 h2 {
-    margin-bottom: 20px;
-    font-size: 25px;
-    text-decoration: underline;
+    margin: 20px 20px 10px 20px;
 }
 
 p {
@@ -156,41 +221,11 @@ p {
 }
 
 .sobre-mim, .habilidades, .projetos, .contato {
-    background-color: transparent;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #c9d1d9;
-	border-radius: 10px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-	padding: 20px;
-	margin: 20px;
-	max-width: 500px;
-    width: 100%;
-    height: 300px;
-	display: flex;
 	flex-direction: column;
+    height: 100vh;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-}
-
-.sobre-mim:hover {
-    transform: scale(1.1);
-    z-index: 1;
-}
-
-.habilidades:hover {
-    transform: scale(1.1);
-    z-index: 1;
-}
-
-.projetos:hover {
-    transform: scale(1.1);
-    z-index: 1;
-}
-
-.contato:hover {
-    transform: scale(1.1);
-    z-index: 1;
 }
 
 @media(max-width: 600px) {
